@@ -1,0 +1,10 @@
+# 从 GitHub Container Registry 拉取预构建镜像
+# 用法: docker compose -f docker-compose.yml -f docker-compose.ghcr.yml up -d
+services:
+  frontend:
+    image: ghcr.io/rodifen/eam-dashboard-frontend:latest
+    build: !reset null
+
+  backend:
+    image: ghcr.io/rodifen/eam-dashboard-backend:latest
+    build: !reset null
